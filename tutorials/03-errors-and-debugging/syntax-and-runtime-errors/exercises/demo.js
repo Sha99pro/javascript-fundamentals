@@ -7,15 +7,16 @@
 
 // DEMO: Un-comment the line below and run the program to see the error message,
 // then fix the code and re-run to verify.
-// console.log("System Initializing";
+console.log("System Initializing");
 
 /** EXAMPLE 2 - RUNTIME ERROR (Illegal Operation) **/
 
 let fuelLevel = 50;
+let tankCapacity = 150;
 
 // DEMO: Un-comment the line below and run the program to see the error message,
 // then fix the code and re-run to verify.
-// console.log(fuelLevel + tankCapacity);
+ console.log(fuelLevel + tankCapacity);
 
 /** EXAMPLE 3 - RUNTIME ERROR (Type Error) **/
 
@@ -23,8 +24,10 @@ let systemErrorCode = null;
 
 // DEMO: Un-comment the line below and run the program to see the error message,
 // then fix the code and re-run to verify.
-// console.log(systemErrorCode.toString());
+systemErrorCode = 90867;
+console.log(systemErrorCode.toString());
 
+ 
 // DEMO: Make a git commit!
 
 /* 

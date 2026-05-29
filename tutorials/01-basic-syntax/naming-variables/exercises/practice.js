@@ -19,6 +19,13 @@ let s1 = "Discovery";
 let s2 = "LC-39A";
 let status = "CRITICAL";
 let msg = "Oxygen levels dropping.";
+//Better naming
+let missionName = "Discovery";
+let launchSite = "LC-39A";
+let currentStatus = "CRITICAL";
+let alertMessage = "Oxygen levels dropping.";
+
+
 
 /** NUMBERS **/
 
@@ -26,6 +33,11 @@ let msg = "Oxygen levels dropping.";
 let speed = 25000;
 let time = 12;
 let fuel = 0.15;
+//Beter naming
+let missionVelocity = 25000;
+let elapsedMissionTime = 12;
+let remainingFuelPercentage = 0.15;
+
 
 /** BOOLEANS **/
 
@@ -34,6 +46,11 @@ let landing = false;
 let engine = true;
 let contact = true;
 let fuelWarning = false;
+//Better naming
+let hasLanded = false;
+let isEngineOn = true;
+let hasContact = true;
+let isShowingFuelWarning = false;
 
 // That's all there is to it! We will cover how to name things like arrays
 // and functions after you've learned about them in the future.

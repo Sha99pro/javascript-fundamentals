@@ -15,6 +15,9 @@ let escapeVelocity = 28000;
     Check if 'shipSpeed' is greater than or equal to 'escapeVelocity',
     then log the new variable.
 */
+let isAtEscapeVelocity = shipSpeed >= escapeVelocity;
+console.log(isAtEscapeVelocity);
+
 
 /** EXERCISE 2: CREW COUNT **/
 
@@ -26,6 +29,11 @@ let crewRequired = 5;
     Check if 'crewPresent' is strictly equal to 'crewRequired',
     then log the new variable.
 */
+let isCrewReady = crewPresent === crewRequired;
+console.log(isCrewReady);
+
+let isCrewReady2 = crewPresent == crewRequired;
+console.log(isCrewReady2);
 
 /** EXERCISE 3: STATUS CHECK **/
 
@@ -36,6 +44,8 @@ let missionStatus = "Pre-Launch";
     Check if 'missionStatus' is NOT equal to the string "Aborted",
     then log the new variable.
 */
+let isNotAborted = missionStatus !== "Aborted";
+console.log(isNotAborted);
 
 /** EXERCISE 4: EXPERIENCE CHECK **/
 
@@ -46,5 +56,7 @@ let pilotRank = "Rookie";
     Check if 'pilotRank' is exactly equal to "Captain",
     then log the new variable.
 */
+let isCaptain = pilotRank === "Captain";
+console.log(isCaptain);
 
 // Great job!

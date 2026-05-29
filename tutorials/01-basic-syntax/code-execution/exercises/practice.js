@@ -6,16 +6,17 @@
 // lines of output:
 // JAVA
 // JAVASCRIPT
-
-word = word + "PT";
-word = word + "VA";
-word = word + "RI";
-word = word + "SC";
-word = word + "JA";
-
 let word = "";
+word = word + "JA";
+word = word + "VA";
 console.log(word);
+
+word = word + "SC";
+word = word + "RI";
+word = word + "PT";
 console.log(word);
+
+
 
 // Run the file before moving on to ensure you get the expected result.
 
@@ -41,6 +42,23 @@ let num3 = 73;
 let num4 = 24;
 let num5 = 88;
 let num6 = 95;
+
+num1 = num1 - 5;
+console.log(num1);
+num2 = num2 + 1;
+console.log(num2);
+num3 = num3 + 1;
+console.log(num3);
+num4 = num4 - 5;
+console.log(num4);
+num5 = num5 - 5;
+console.log(num5);
+num6 = num6 + 1;
+console.log(num6);
+
+
+let finalSum = num1 + num2 + num3 + num4 + num5 + num6
+console.log(finalSum);
 
 // All done? Great job! Understanding how JavaScript executes and evaluates code is
 // important. Keep these principles in mind as you solve future problems!

@@ -21,6 +21,15 @@ formatHeader("Fleet Status Sweep (for...of)", false);
 // DEMO: Loop over the array of ship objects.
 //  - If the vessel is active,print a report with their payload.
 //  - If it is undergoing maintenance,print a report stating that instead.
+for(let vessel of sectorFleet){
+	if(vessel.status === "Active"){
+		console.log(`The vessel ${vessel.name} is active. Current cargo weight of this vessel is: ${vessel.cargoWeight}.`);
+	}else if(vessel.status === "Maintenance"){
+		console.log(`Notice: The vessel ${vessel.name} is offline. Skipping routing.`);
+	}
+}
+
+
 
 /** EXAMPLE 2 - TOTAL LOGISTICS CALCULATION **/
 
@@ -29,9 +38,13 @@ formatHeader("Aggregating Total Cargo Mass (Standard for)", false);
 let totalSectorTonnage = 0;
 
 // DEMO: Loop over the array to calculate combined total
+for(let i = 0; i < sectorFleet.length; i++){
+		totalSectorTonnage += sectorFleet[i].cargoWeight;
+}
+
 
 // DEMO: Log a report on the total tonnage
-
+console.log(`Combined total sector mass across all regional hulls is: ${totalSectorTonnage}t.`);
 // DEMO: Make a git commit!
 
 /* 

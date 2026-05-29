@@ -5,7 +5,7 @@
 console.log("JavaScript");
 
 // DEMO: On the next line, print your name to the console.
-
+console.log("Meghana");
 // DEMO: Make a git commit!
 
 /* 

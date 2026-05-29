@@ -30,6 +30,7 @@ const engineCore = {
 let statRequested = "pressure";
 
 // DEMO: What happens if we try to use dot notation here?
+console.log(`${engineCore[statRequested]}`);
 
 // DEMO: Use the dynamic key to get the stat
 

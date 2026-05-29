@@ -15,6 +15,8 @@ let isSafeToEngage = true;
     Otherwise, assign "Autopilot: MANUAL".
     Then log the result.
 */
+let autoPilotStatus = isSafeToEngage ? "Autopilot: ACTIVE" : "Autopilot: MANUAL";
+console.log(autoPilotStatus);
 
 /** EXERCISE 2: SHIELD POWER LEVEL **/
 
@@ -26,6 +28,8 @@ let shieldStrength = 45;
     Otherwise, assign "SHIELD STRONG".
     Then log the result.
 */
+let shieldWarning = shieldStrength < 50 ? "SHIELD WEAK" : "SHIELD STRONG";
+console.log(shieldWarning);
 
 /** EXERCISE 3: PASSENGER COUNT ALERT **/
 
@@ -37,6 +41,9 @@ let passengerCount = 6;
     Otherwise, assign "Acceptable".
     Then log the result.
 */
+let shuttleCapacity = passengerCount > 4 ? "Over Capacity" : "Acceptable";
+console.log(shuttleCapacity);
+
 
 /** EXERCISE 4: GEAR DEPLOYMENT **/
 
@@ -48,5 +55,8 @@ let altitudeKm = 12;
     Otherwise, assign "STOWED".
     Then log the result.
 */
+let landingGear = altitudeKm < 5 ? "DEPLOYED" : "STOWED";
+console.log(landingGear);
+
 
 // Great job!

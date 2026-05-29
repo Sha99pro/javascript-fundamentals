@@ -20,6 +20,22 @@ let rocketFuelTempCelsius = 2740.5;
 let isSystemReady = true;
 let sensorData = null;
 
+
+let countDownAsText = countdown.toString();
+console.log(countDownAsText, typeof countDownAsText);
+
+let rocketTempCelsius = String(rocketFuelTempCelsius);
+console.log(rocketTempCelsius, typeof rocketTempCelsius);
+
+let isSystemReadyInText = isSystemReady.toString();
+console.log(isSystemReadyInText, typeof isSystemReadyInText);
+
+let sensorDataInText = String(sensorData);
+console.log(sensorDataInText, typeof sensorDataInText);
+
+
+
+
 // DEMO: Make a git commit!
 
 /* 

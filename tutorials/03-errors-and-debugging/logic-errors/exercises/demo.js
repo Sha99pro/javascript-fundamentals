@@ -11,6 +11,10 @@ let isShieldSafe = shieldPower < dangerZoneThreshold;
 console.log(`Shield Power: ${shieldPower}`);
 console.log(`Is Shield Safe? ${isShieldSafe}`);
 
+
+isShieldSafe = shieldPower >= dangerZoneThreshold;
+console.log(`Shield Power: ${shieldPower}`);
+console.log(`Shield status: ${isShieldSafe}`);
 /** EXAMPLE 2 - THE WRONG VARIABLE **/
 
 let pilotExperience = 10; // years
@@ -20,11 +24,14 @@ let hasHelmet = false;
 let isPilotCleared = false; // for spacewalk
 
 // DEMO: Run the code to see the result, then fix the code and re-run to verify.
-if (pilotExperience >= requiredExperience && pilotExperience >= requiredExperience) {
+if (pilotExperience >= requiredExperience && hasHelmet){
 	isPilotCleared = true;
+    console.log("Pilot is cleared for spacewalk");
+}else{
+    isPilotCleared = false;
+    console.log("Warning: Helmet is missing. Stay in the spaceship.");
 }
 
-console.log(isPilotCleared);
 
 // DEMO: Make a git commit!
 

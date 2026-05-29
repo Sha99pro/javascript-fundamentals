@@ -19,6 +19,11 @@ const stationPingsMs = {
     "Connection to [stationKey] latency is: [ping value]ms."
 */
 
+for(let stationKey in stationPingsMs){
+    let value = stationPingsMs[stationKey];
+    console.log(`Connection to ${stationKey} latency is: ${value}ms.`);
+}
+
 /** EXERCISE 2: WEAPONS INVENTORY VERIFICATION **/
 
 const pdcAmmoLocker = {
@@ -34,3 +39,10 @@ const pdcAmmoLocker = {
     log an emergency update using a template literal: "CRITICAL DEPLETION: [key] ammo 
     is completely empty!"
 */
+let lockerKeys = Object.keys(pdcAmmoLocker);
+console.log(lockerKeys);
+for(let currentKey of lockerKeys){
+    if(pdcAmmoLocker[currentKey] === 0){
+        console.log(`"CRITICAL DEPLETION: ${currentKey} ammo is completely empty!"`);
+    }
+}

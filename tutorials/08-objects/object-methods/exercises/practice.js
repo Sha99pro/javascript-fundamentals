@@ -21,6 +21,8 @@ const communicationArray = {
     object above using a new key named 'broadcast'. 
     Then, execute the method from the object.
 */
+communicationArray.broadcast = transmitMessage;
+communicationArray.broadcast();
 
 /** EXERCISE 2: CORE HEALTH CALCULATOR **/
 

@@ -15,6 +15,8 @@ const pingMetricsMs = [340, 12, 89, 4, 115];
     numeric comparator callback.
     Store the sorted array inside a constant named 'optimizedPings' and log it.
 */
+const clonedMetrics = [...pingMetricsMs].sort((a , b) => a - b);
+console.log(clonedMetrics);
 
 /** EXERCISE 2: WEAPONS SYSTEM THREAT INDEXING **/
 
@@ -30,3 +32,7 @@ const targetLockProfiles = [
     Remember to safely clone the array before sorting using the spread operator!
     Capture the resulting array in a constant named 'highPriorityEngagements' and log it.
 */
+const highPriorityEngagements = [...targetLockProfiles].sort((targetA , targetB) => {
+    return targetB.structuralBreachChance - targetA.structuralBreachChance;
+});
+console.log(highPriorityEngagements);

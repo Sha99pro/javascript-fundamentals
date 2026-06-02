@@ -6,6 +6,8 @@ const structuralStressTolerances = [8, 105, 22, 1000, 4];
 
 // DEMO: Use a basic sort on the array of numbers above and log it.
 // What happens?
+const stringSort = [...structuralStressTolerances].sort((a, b) => a - b);
+console.log(stringSort);
 
 // DEMO: Create a numeric comparator function for effective sorting of numbers
 
@@ -19,9 +21,17 @@ const rocinanteCargoHold = [
 
 // DEMO: Sort cargo containers in DESCENDING order based on weight (heaviest first)
 
+const heavyCargo = [...rocinanteCargoHold].sort((cargoA , cargoB) => {
+	return cargoB.massTons - cargoA.massTons;
+});
+console.log(heavyCargo);
+
 console.log("\n--- RECONFIGURED STOWAGE BAY MANIFEST (HEAVIEST FIRST) ---");
 
 // DEMO: Use .forEach() to print each container's name and weight
+
+heavyCargo.forEach(cargo => console.log(`${cargo.containerId} , ${cargo.massTons}`));
+
 
 // DEMO: Make a git commit!
 

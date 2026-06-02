@@ -13,18 +13,28 @@ console.log("Priority Target Profile Identified:");
 // DEMO: Use .find() to locate the object with the highest priority threat target
 // and log it.
 
+const highThreatTarget = tacticalTargets.find(target => target.threatLevel >=9);
+console.log(highThreatTarget);
+
+
 // DEMO: Use .findIndex() to find out exactly where the rogue 'TRG-404' drone sits
 // inside our system index array and log it
+
+const findIndex = tacticalTargets.findIndex(target => target.id === "TRG-404");
+console.log("The index of target with id 'TRG-404':" , findIndex);
 
 /** EXAMPLE 2 - FILTER SUB-ARRAY EXTRACTION **/
 
 // DEMO: Use .filter() to create a collection subset containing only targets safe
 // enough for an escort drone to engage (Threat < 5)
 
+const lowRiskTargets = tacticalTargets.filter(target => target.threatLevel < 5);
+console.log("Targets safe enough for an escort drone to engage :" , lowRiskTargets);
+
 console.log("\n--- COMBAT MATRIX ENVELOPE: LOGGING ENGAGEABLE OBJECTS ---");
 
 // DEMO: Use .forEach() to print each of the low risk targets on a separate line.
-
+lowRiskTargets.forEach(target => console.log("Low risk targets are:" , target));
 // DEMO: Make a git commit!
 
 /* 

@@ -5,7 +5,11 @@
 const sectorWaterRationsTons = [45, 12, 88, 34, 50];
 
 // DEMO: Add all these individual shipment values together into one sum total and log it
-
+const totalWaterReserves = sectorWaterRationsTons.reduce((acc , current) => {
+	return acc + current;
+}, 0);
+  
+console.log(totalWaterReserves);
 /** EXAMPLE 2 - DATA EXTRACTS FROM OBJECT MATRIXES **/
 
 const crewManifest = [
@@ -16,6 +20,11 @@ const crewManifest = [
 ];
 
 // DEMO: Calculate total crew rations needed by accessing object keys, then log it
+const totalRation = crewManifest.reduce((acc , person) => {
+	return acc + person.dailyCalorieRequirement;
+}, 0);
+console.log(totalRation);
+
 
 // DEMO: Make a git commit!
 

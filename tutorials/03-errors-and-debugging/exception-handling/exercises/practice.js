@@ -8,6 +8,14 @@
 /** EXERCISE 1: DEFLECTING THE BAD VALUE CRASH **/
 
 let gridShieldCharge = 100;
+try{
+   gridShieldCharge.toUpperCase();
+}catch (errObj){
+   console.log("System bypassed a fatal crash.");
+   gridShieldCharge = 0;
+}finally{
+   console.log(`Current Status: ${gridShieldCharge}`);
+}
 
 /*
     TODO: Wrap the problematic code below inside a try/catch/finally sequence.
@@ -18,14 +26,38 @@ let gridShieldCharge = 100;
        gridShieldCharge.
 */
 
-gridShieldCharge.toUpperCase();
+
 
 /** EXERCISE 2: THE SECURE DEPLOYMENT ENGINE **/
 
 let dockingClampStatus = "LOCKED";
+try{
+   console.log("Attempting automated separation..." );
+   console.log(synchronousDeploymentStatus);
+}catch (errObj){
+   console.log("Separation error caught! Keeping clamps locked.");
+   console.error(errObj);
+}finally{
+   dockingClampStatus = "MANUAL_OVERRIDE";
+   console.log(` ${dockingClampStatus} `);
+}
+
 
 /*
     TODO: Build a complete try/catch/finally sequence.
+    1. Inside 'try', log: "Attempting automated separation..." 
+       Then attempt to log a non-existent variable, synchronousDeploymentStatus
+    2. Inside 'catch', log: "Separation error caught! Keeping clamps locked."
+       Then print the errorObj using the Console API's .error method (instead of .log)
+    3. Inside 'finally', update the 'dockingClampStatus' variable to read "MANUAL_OVERRIDE",
+       and print a final report on the status of the docking clamp.
+*/
+
+
+
+
+/*
+    Build a complete try/catch/finally sequence.
     1. Inside 'try', log: "Attempting automated separation..." 
        Then attempt to log a non-existent variable, synchronousDeploymentStatus
     2. Inside 'catch', log: "Separation error caught! Keeping clamps locked."
